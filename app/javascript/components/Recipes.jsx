@@ -20,19 +20,19 @@ const Recipes = () => {
 
   const allRecipes = recipes.map((recipe, index) => (
     <div key={index} className="col-md-6 col-lg-4">
-      <div className="card mb-4">
-        <img
-          src={recipe.image}
-          className="card-img-top"
-          alt={`${recipe.name} image`}
-        />
-        <div className="card-body">
-          <h5 className="card-title">{recipe.name}</h5>
-          <Link to={`/recipe/${recipe.id}`} className="btn custom-button">
+      <Link to={`/recipe/${recipe.id}`} className="btn">
+        <div className="card mb-4">
+          <img
+            src={recipe.image}
+            className="card-img-top"
+            alt={`${recipe.name} image`}
+          />
+          <div className="card-body">
+            <h5 className="card-title">{recipe.name}</h5>
             View Recipe
-          </Link>
-        </div>
-      </div>
+          </div>
+        </div>{" "}
+      </Link>
     </div>
   ));
   const noRecipe = (
